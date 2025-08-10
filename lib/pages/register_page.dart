@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   final TextEditingController emailCtrl = TextEditingController();
   final TextEditingController passCtrl = TextEditingController();
   final TextEditingController confirmPassCtrl = TextEditingController();

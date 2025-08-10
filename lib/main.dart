@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'screens/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'pages/login_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(TenantApp());
 }
 
@@ -9,11 +15,11 @@ class TenantApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tenant System',
+      title: 'MyTenant',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: LoginScreen(),
+      home: LoginPage(),
     );
   }
 }

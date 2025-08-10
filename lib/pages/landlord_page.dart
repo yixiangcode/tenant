@@ -1,48 +1,32 @@
 import 'package:flutter/material.dart';
+import 'property_page.dart';
 
-class LandlordScreen extends StatelessWidget {
+class LandlordPage extends StatelessWidget {
+  // This list no longer contains the onTap functions.
   final List<Map<String, dynamic>> menuItems = [
     {
       "title": "Manage Tenant",
       "icon": Icons.people,
-      "onTap": () {
-        // TODO: Go to tenant screen
-      }
     },
     {
       "title": "Manage Property",
       "icon": Icons.home_work,
-      "onTap": () {
-        // TODO: Go to property screen
-      }
     },
     {
       "title": "Chat",
       "icon": Icons.mark_unread_chat_alt,
-      "onTap": () {
-        // TODO: Go to chat screen
-      }
     },
     {
       "title": "Income",
       "icon": Icons.attach_money,
-      "onTap": () {
-        // TODO: Go to income screen
-      }
     },
     {
       "title": "Notifications",
       "icon": Icons.notifications,
-      "onTap": () {
-        // TODO: Go to notification screen
-      }
     },
     {
       "title": "Logout",
       "icon": Icons.logout,
-      "onTap": () {
-        // TODO: Log out
-      }
     },
   ];
 
@@ -60,15 +44,43 @@ class LandlordScreen extends StatelessWidget {
         child: GridView.builder(
           itemCount: menuItems.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // two columns
+            crossAxisCount: 2,
             mainAxisSpacing: 16,
             crossAxisSpacing: 16,
             childAspectRatio: 1,
           ),
-          itemBuilder: (context, index) {
+          itemBuilder: (BuildContext context, int index) {
             final item = menuItems[index];
+
+            // A helper function to handle navigation based on the item title
+            void handleTap() {
+              switch (item['title']) {
+                case "Manage Property":
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PropertyPage(ownerId: "123")),
+                  );
+                  break;
+                case "Manage Tenant":
+                // TODO: Navigate to tenant screen
+                  break;
+                case "Chat":
+                // TODO: Navigate to chat screen
+                  break;
+                case "Income":
+                // TODO: Navigate to income screen
+                  break;
+                case "Notifications":
+                // TODO: Navigate to notification screen
+                  break;
+                case "Logout":
+                // TODO: Handle logout logic
+                  break;
+              }
+            }
+
             return GestureDetector(
-              onTap: item['onTap'],
+              onTap: handleTap,
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,

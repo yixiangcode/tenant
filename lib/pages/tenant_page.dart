@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TenantScreen extends StatelessWidget {
+class TenantPage extends StatelessWidget {
   final List<Map<String, dynamic>> menuItems = [
     {
       "title": "Upload Document",

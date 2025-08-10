@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'tenant_screen.dart';
-import 'landlord_screen.dart';
-import 'register_screen.dart';
+import 'tenant_page.dart';
+import 'landlord_page.dart';
+import 'register_page.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   final TextEditingController emailCtrl = TextEditingController();
   final TextEditingController passCtrl = TextEditingController();
 
@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                   // 跳转到 Home Page
                   Navigator.pushReplacement( //push
                     context,
-                    MaterialPageRoute(builder: (context) => LandlordScreen()), // 改这里！！！！！
+                    MaterialPageRoute(builder: (context) => LandlordPage()), // 改这里！！！！！
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
                   // 点击后跳转到 RegisterScreen
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RegisterScreen()),
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
                   );
                 },
                 child: Text(
