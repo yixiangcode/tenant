@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "961743427049",
+    "project_id": "tenantapp-fyp",
+    "storage_bucket": "tenantapp-fyp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961743427049:android:6c2a153c1beaba17cca778",
+        "android_client_info": {
+          "package_name": "com.yixiang.tenant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZoBMpiAy6rfySUu9eQLj-zzjOXcgPmQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
